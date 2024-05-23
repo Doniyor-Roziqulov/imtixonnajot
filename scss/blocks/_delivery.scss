@@ -1,0 +1,124 @@
+.delivery {
+    padding-bottom: 125px;
+}
+
+.delivery__title {
+    color: var(--main-font, #363738);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 55px */
+    margin-top: 0;
+    margin-bottom: 48px;
+}
+
+.delivery__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.delivery__bold {
+    color: var(--main-font, #363738);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 25px */
+    margin-top: 0;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.delivery__bold::after {
+    content: "";
+    width: 93px;
+    height: 3px;
+    background-color: #ffce50;
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+}
+
+.delivery__item {
+    fill: var(--white, #fff);
+    box-shadow: (0px 4px 15px rgba(0, 0, 0, 0.12));
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.delivery__text {
+    color: var(--additional-font, #6b6b6c);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+@media only screen and (min-width: 700px) {
+    .delivery__title {
+      font-size: 44px;
+    }
+
+    .delivery__bold {
+      font-size: 20px;
+    }
+
+    .delivery__item {
+      padding: 40px 76px 48px 85px;
+      position: relative;
+    }
+
+    .delivery__text {
+      font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .delivery__title {
+      font-size: 48px;
+    }
+
+    .delivery {
+      padding-bottom: 62px;
+    }
+
+    .delivery__item
+     {
+      padding: 32px 132px 32px 483px;
+     }
+
+     .delivery__item::before {
+      content: "";
+      width: 331px;
+      height: 181px;
+      background-image: url(../../images/hand.png);
+      position: absolute;
+      left: 96px;
+     }
+
+     .delivery__item:nth-child(2)::before {
+      content: "";
+      width: 331px;
+      height: 181px;
+      background-image: url(../../images/kema.png);
+      position: absolute;
+      left: 96px;
+     }
+
+     .delivery__item:nth-child(3)::before {
+      content: "";
+      width: 331px;
+      height: 181px;
+      background-image: url(../../images/man.png);
+      position: absolute;
+      left: 96px;
+     }
+}

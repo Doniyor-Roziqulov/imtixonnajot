@@ -1,0 +1,26 @@
+@mixin transitions {
+    transition: color 0.4s linear;
+}
+
+@mixin flexbox(
+    $display: flex,
+    $direction: column,
+    $justify: space-between,
+    $items: center
+) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $items;
+}
+
+@mixin lists($top: 0, $bottom: 0, $left: 0) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+    padding-left: $left;
+    list-style: none;
+}
+
+@mixin transitionbg {
+    transition: background-color 0.4s linear;
+}

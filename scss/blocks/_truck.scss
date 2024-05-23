@@ -1,0 +1,14 @@
+.truck__img {
+  width: 100%;
+  height: auto;
+}
+
+.truck {
+  padding-bottom: 126px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .truck {
+      padding-bottom: 166px;
+    }
+}
