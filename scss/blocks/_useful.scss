@@ -1,118 +1,106 @@
 @use "../variables" as *;
 @use "../mixins" as *;
 
-.useful__box {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-image: url(../../images/usbg.png);
-    background-repeat: no-repeat;
-    background-size: 300px auto;
-    background-position: calc(100% - 0px) calc(50% - 0px);
-    background-color: #0b7572;
-}
-
 .useful__title {
-    color: $main-footer-text-color;
-    font-size: 20px;
+    color: #08546c;
+    font-size: 25px;
+    text-align: center;
     font-style: normal;
     font-weight: 600;
-    line-height: 125%; /* 55px */
+    line-height: 56.25px; /* 125% */
     margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.useful {
+    padding-bottom: 100px;
+}
+
+.useful__desc {
+    color: #757575;
+    font-size: 14px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    line-height: 25px; /* 160% */
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+
+.useful__img {
+    width: 272px;
+    height: auto;
 }
 
 .useful__list {
-    padding-top: 48px;
-    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 20px;
+    row-gap: 25px;
     @include lists;
 }
 
 .useful__item {
-    padding-top: 95px;
+    width: 272px;
     position: relative;
-}
-
-.useful__item::before {
-    content: "";
-    width: 90px;
-    height: 88px;
-    background-image: url(../../images/usone.svg);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.useful__item:nth-child(2)::before {
-    content: "";
-    width: 91px;
-    height: 88px;
-    background-image: url(../../images/ustwo.svg);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.useful__item:nth-child(3)::before {
-    content: "";
-    width: 91px;
-    height: 88px;
-    background-image: url(../../images/usthere.svg);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.useful__item:nth-child(4)::before {
-    content: "";
-    width: 91px;
-    height: 88px;
-    background-image: url(../../images/usfore.svg);
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .useful__bold {
     display: inline-block;
-    color: $main-text-color;
-    font-size: 18px;
+    color: #08546c;
+    font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 135%; /* 27px */
-    margin-top: 0;
-    margin-bottom: 16px;
+    line-height: 28.8px; /* 96% */
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
 
 .useful__text {
-    color: $main-desc-color;
+    color: #757575;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 24px */
+    line-height: 25.6px; /* 160% */
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+}
+
+.useful__link {
+    color: #08546c;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25.6px; /* 142.222% */
+    text-decoration-line: none;
+    position: relative;
+}
+
+.useful__link::after {
+    content: "";
+    width: 18px;
+    height: 14px;
+    background-image: url(../../images/iconning.svg);
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+}
+
+.useful__link:hover {
+    color: #ffa800;
+}
+
+@media only screen and (min-width: 450px) {
+    .useful__item {
+        width: 402px;
+    }
+
+    .useful__img {
+        width: 402px;
+    }
 }
 
 @media only screen and (min-width: 600px) {
-    .useful__box {
-        padding-top: 112px;
-        padding-bottom: 106px;
-        background-image: url(../../images/usbg.png);
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: calc(100% - 0px) calc(50% - 0px);
-        background-color: #0b7572;
-    }
-
-    .useful__small {
-        width: 288px;
-    }
-
     .useful__title {
         font-size: 44px;
     }
@@ -123,19 +111,8 @@
         margin-left: 0;
     }
 
-    .useful__box {
-        padding-left: 85px;
-    }
-
     .useful__list {
         row-gap: 50px;
-    }
-
-    .useful__item {
-        padding-top: 0;
-        padding-left: 140px;
-        padding-right: 120px;
-        margin-left: 100px;
     }
 
     .useful__bold {
@@ -148,49 +125,27 @@
 }
 
 @media only screen and (min-width: 1100px) {
-    .useful__box {
-        padding-top: 172px;
-        padding-bottom: 160px;
-        padding-left: 88px;
-        background-image: url(../../images/usedesctop.png);
-    }
-
     .useful__title {
-        font-size: 48px;
+        font-size: 45px;
     }
 
-    .useful__small {
-        width: 360px;
+    .useful {
+        padding-bottom: 200px;
     }
 
     .useful__list {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        row-gap: 62px;
-        padding-top: 72px;
-        padding-left: 66px;
-        padding-right: 110px;
-        padding-bottom: 122px;
+        row-gap: 70px;
     }
 
     .useful__item {
-        max-width: 410px;
-        padding-right: 0;
-        margin-left: 0;
+        width: 515px;
     }
 
-    .useful__item:nth-child(2)::before {
-        background-image: url(../../images/usthere.svg);
-    }
+    .useful__img {
+        width: 515px;
 
-    .useful__item:nth-child(3)::before {
-        background-image: url(../../images/ustwo.svg);
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .useful__list {
-        padding-right: 178px;
     }
 }
